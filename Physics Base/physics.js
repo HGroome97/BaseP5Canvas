@@ -53,20 +53,3 @@ function collisionDetection(i){
   }
 
 }
-
-
-var keyMap = {};
-onkeydown = onkeyup = function(e){
-    e = e || event; // to deal with IE
-    keyMap[e.keyCode] = e.type == 'keydown';
-    if (keyMap[38]) {
-      verticalAcceleration(forcedYAcceleration);
-    } else if (keyMap[40]) {
-      verticalAcceleration(-forcedYAcceleration);
-    }
-    if (keyMap[37]) {
-      horizontalAcceleration(forcedXAcceleration);
-    } else if (keyMap[39]) {
-      horizontalAcceleration(-forcedXAcceleration);
-    }
-}
