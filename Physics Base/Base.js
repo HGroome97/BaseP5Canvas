@@ -6,16 +6,20 @@ function setup() {
   background(0);
 }
 
-function draw() {
+function drawPoints() {
   background(0);
   stroke(255);
   strokeWeight(8);
 
-  //gravity(y_vals);
-  move();
   for (let i = 0; i < x_vals.length; i++) {
     let px = mapX(x_vals[i]);
     let py = mapY(y_vals[i]);
     point(px, py);
   }
+}
+
+function draw() {
+  //gravity(y_vals);
+  move();
+  drawPoints();
 }

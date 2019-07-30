@@ -6,7 +6,7 @@ function setup() {
   background(0);
 }
 
-function draw() {
+function drawPoints(){
   stroke(255);
   strokeWeight(8);
 
@@ -15,4 +15,8 @@ function draw() {
     let py = mapY(y_vals[i]);
     point(px, py);
   }
+}
+
+function draw() {
+  drawPoints();
 }
